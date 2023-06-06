@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Scripts</title>
+    </head>
+    <body>
+        <h1>List of Scripts</h1>
+        {% for script in scripts %}
+            <div>
+                <h2>{{ script.name }}</h2>
+                <p>{{ script.description }}</p>
+                <pre>{{ script.code }}</pre>
+            </div>
+        {% empty %}
+            <p>No scripts available.</p>
+        {% endfor %}
+    </body>
+</html>
