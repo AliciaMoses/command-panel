@@ -1,3 +1,7 @@
 from django.shortcuts import render
 
-# Create your views here.
+from .models import Script
+
+def script_list(request):
+    scripts = Script.objects.all()
+    return render(request, 'commandpanel/scripts.html', {'scripts': scripts})
