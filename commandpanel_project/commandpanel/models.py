@@ -7,7 +7,7 @@ class UserProfile(models.Model):
 class Script(models.Model):
     name = models.CharField(max_length=40)
     description = models.TextField()
-    code = models.TextField()#
+    code = models.TextField()
     
 class Parameter(models.Model):
     script = models.ForeignKey(Script, on_delete=models.CASCADE)
